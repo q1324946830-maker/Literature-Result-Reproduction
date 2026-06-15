@@ -1,0 +1,45 @@
+IoU: 0.8529
+Dice: 0.9191
+Hd: 21.0376
+Hd95: 1.3717
+Recall: 0.9036
+Specificity: 0.9855
+Precision: 0.9381
+
+
+arch: GBC_Rolling_Unet_L
+batch_size: 8
+dataseed: 41
+dataset: ISIC17
+deep_supervision: False
+div_weight: 0.01
+early_stopping: -1
+epochs: 400
+factor: 0.1
+gamma: 0.6666666666666666
+gbc_lr: 0.01
+gbc_num_balls: 32
+gbc_proj_dim: 0
+gbc_weight_decay: 0.0001
+img_ext: jpg
+input_channels: 3
+input_h: 256
+input_w: 256
+loss: BCEDiceWithGeometryLoss
+lr: 0.0001
+mask_ext: .png
+milestones: 1,2
+min_lr: 1e-05
+momentum: 0.9
+name: isic17_run1
+nesterov: False
+num_classes: 1
+num_workers: 4
+optimizer: Adam
+patience: 2
+scale_weight: 0.1
+scheduler: CosineAnnealingLR
+tau: 1.0
+use_diag_cov: True
+weight_decay: 0.0001
+--------------------
